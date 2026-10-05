@@ -1,0 +1,15 @@
+# Dependencias y compilados
+node_modules/
+dist/
+dev-dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Configuracion local con contrasenas (se entrega .env.example)
+.env
+
+# Sistema operativo y editor
+.DS_Store
+.vscode/
+*.log

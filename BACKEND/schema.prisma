@@ -1,0 +1,29 @@
+generator client {
+  provider             = "prisma-client-py"
+  recursive_type_depth = "5"
+  interface            = "sync"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// Un movimiento de la cuenta del Banco de Tecnologia CEIPA.
+// CAMBIOS: se quita "impacto" y se agrega "fecha".
+// El saldo NO se guarda: se calcula sumando y restando los movimientos,
+// asi nunca puede quedar descuadrado.
+model Transaccion {
+  id     Int      @id @default(autoincrement())
+  codigo String   @unique
+  tipo   String
+  monto  Int
+  fecha  DateTime @default(now())
+}
+
+model Usuario {
+  id       Int    @id @default(autoincrement())
+  nombre   String
+  correo   String @unique
+  password String
+}
