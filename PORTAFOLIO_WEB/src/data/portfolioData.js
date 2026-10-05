@@ -9,6 +9,7 @@
 
 import profilePhoto from '../assets/images/profile.jpg'
 import projectPlaceholder from '../assets/images/project-placeholder.svg'
+import bancoCeipa from '../assets/images/banco-ceipa.png'
 
 // ----------------------------------------------------------------------------
 // PERFIL: información principal que aparece en la sección Hero
@@ -73,6 +74,18 @@ export const skillsData = [
 // PROYECTOS
 // ----------------------------------------------------------------------------
 export const projectsData = [
+  {
+    id: 4,
+    title: 'Banco de Tecnología CEIPA',
+    description:
+      'Aplicación web de tres capas para registrar consignaciones, avances, pagos y transferencias con el ' +
+      'saldo calculado en todo momento. API REST en Flask con validaciones y reglas de negocio (el saldo nunca ' +
+      'queda negativo), base de datos MySQL en Docker con Prisma e interfaz en React.',
+    image: bancoCeipa,
+    technologies: ['React', 'Tailwind CSS', 'Python', 'Flask', 'Prisma', 'MySQL', 'Docker'],
+    repoUrl: 'https://github.com/DavisZulu/Estacion_3',
+    demoUrl: '',
+  },
   {
     id: 1,
     title: 'MasterFlor',
