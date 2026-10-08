@@ -13,6 +13,7 @@ datasource db {
 // CAMBIOS: se quita "impacto" y se agrega "fecha".
 // El saldo NO se guarda: se calcula sumando y restando los movimientos,
 // asi nunca puede quedar descuadrado.
+
 model Transaccion {
   id     Int      @id @default(autoincrement())
   codigo String   @unique
